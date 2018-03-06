@@ -1,49 +1,341 @@
 <!doctype html>
-<html>
+<html lang="en">
+
 	<head>
 		<meta charset="utf-8">
+
+		<title>The Data Archivist</title>
+
+		<meta name="description" content="The Data Archivist: the archivist’s role in data management and preservation">
+		<meta name="author" content="Sara Allain">
+
+		<meta name="apple-mobile-web-app-capable" content="yes" />
+		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+
 		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 
-		<title>reveal.js</title>
+		<base target="_blank">
 
-		<link rel="stylesheet" href="css/reveal.css">
-		<link rel="stylesheet" href="css/theme/black.css">
+		<link rel="stylesheet" href="css/reveal.min.css">
+		<link rel="stylesheet" href="css/theme/simple.css" id="theme">
 
-		<!-- Theme used for syntax highlighting of code -->
+		<!-- For syntax highlighting -->
 		<link rel="stylesheet" href="lib/css/zenburn.css">
 
-		<!-- Printing and PDF exports -->
+		<!-- If the query includes 'print-pdf', include the PDF print sheet -->
 		<script>
-			var link = document.createElement( 'link' );
-			link.rel = 'stylesheet';
-			link.type = 'text/css';
-			link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
-			document.getElementsByTagName( 'head' )[0].appendChild( link );
+			if( window.location.search.match( /print-pdf/gi ) ) {
+				var link = document.createElement( 'link' );
+				link.rel = 'stylesheet';
+				link.type = 'text/css';
+				link.href = 'css/print/pdf.css';
+				document.getElementsByTagName( 'head' )[0].appendChild( link );
+			}
 		</script>
+
+		<!--[if lt IE 9]>
+		<script src="lib/js/html5shiv.js"></script>
+		<![endif]-->
 	</head>
+
 	<body>
+
 		<div class="reveal">
+
+			<!-- Any section element inside of this container is displayed as a slide -->
 			<div class="slides">
-				<section>Slide 1</section>
-				<section>Slide 2</section>
+				<section class="titlecard">
+					<h2 class="fancy">The Data Archivist</h2>
+					<br>
+					<h3>The archivist’s role in data management<br>and preservation</h3>
+					<br>
+					<small>Sara Allain & Sarah Romkey | Artefactual Systems, Inc.</small>
+					<br>
+					<small>May 26, 2016 | TCDL 2016, Austin, Texas</small>
+				</section>
+
+<!--Slide template
+
+				<section class="body">
+					<h2>Slide title</h2>
+					<hr>
+					<p>Text here</p>
+					<ul>
+						<li>List elements here</li>
+						<li></li>
+						<li></li>
+					</ul>
+				</section>
+
+-->
+
+				<section class="body">
+					<h2>Today's talking points</h2>
+					<hr>
+					<p>The role of the archivist in research data management</p>
+					<p>Basic intro to Archivematica</p>
+					<p>Three case studies:</p>
+						<ol>
+							<li>Ontario Council of University Libraries + Dataverse</li>
+							<li>University of York & University of Hull + Hydra</li>
+							<li>Compute Canada + Globus</li>
+						</ol>
+				</section>
+
+				<section class="body">
+					<h2 class="fancy">Archivists<br>+<br>RDM</h2>
+				</section>
+
+				<section class="body">
+					<h2>RDM Isn't New</h2>
+					<hr>
+					<p>We've been thinking about the role of the library in research data management for several years.</p>
+				</section>
+
+				<section class="body">
+					<h2>The Digital Preservation Gap</h2>
+					<hr>
+					<p>Digital management platforms must adequately preserve data.</p>
+					<p>Domain-specific tools and proprietary formats make this difficult.</p>
+				</section>
+
+				<section class="body">
+					<h2>Assertions</h2>
+					<hr>
+					<p>Research data management is a digital preservation problem.</p>
+					<p>Archivists are pretty good at digital preservation.</p>
+				</section>
+
+				<section class="body">
+					<h2 class="fancy">Why Archivematica?</h2>
+				</section>
+
+				<section class="body">
+					<h2>Definition</h2>
+					<hr>
+					<p>Web- and standards-based open-source application which allows your institution to preserve long-term access to trustworthy, authentic and reliable digital content.</p>
+				</section>
+
+				<section class="body">
+					<img src="img/oais.png">
+				</section>
+
+				<section class="body">
+					<img src="img/transfer.png">
+				</section>
+
+				<section class="body">
+					<img src="img/ingest.png">
+				</section>
+
+				<section class="body">
+					<img src="img/normalize.png">
+				</section>
+
+				<section class="body">
+					<img src="img/atom.png">
+				</section>
+
+				<section class="body">
+					<img src="img/storage.png">
+				</section>
+
+				<section class="body">
+					<img src="img/oais.png">
+				</section>
+
+				<section class="body">
+					<h2>So... Why Archivematica?</h2>
+					<hr>
+					<p>Based on standards and best practices</p>
+					<p>Format and repository agnostic</p>
+					<p>Small enough to run on a laptop</p>
+					<p>Robust enough to handle petabytes of data</p>
+					<p>Modular</p>
+					<p>Free and open source</p>
+					<p>Familiar</p>
+				</section>
+
+				<section class="body">
+					<h2>Archivematica is for Archivists</h2>
+					<hr>
+					<p>It was built around archival standards, using archival terminology, and it's meant to anticipate archival digital preservation workflows. (Of course, everyone's welcome to use it!)</p>
+					<p>Luckily, since RDM is a digital preservation problem, it's well suited to RDM workflows as well.</p>
+				</section>
+
+				<section class="body">
+					<h2 class="fancy">York/Hull<br>+<br>Hydra</h2>
+					<hr>
+					<h2>Case Study 1</h2>
+				</section>
+
+				<section class="body">
+					<h2>Research Data Spring</h2>
+					<hr>
+					<p>Jisc-funded projects aimed at encouraging tool and workflow development to tackle various aspects of research data management.</p>
+					<p>Available project funding was anywhere from £250k to £1m.</p>
+				</section>
+
+				<section class="body">
+					<h2>Research Data Spring</h2>
+					<hr>
+					<p>York and Hull were successful at obtaining funding for all three phases of the project.</p>
+					<p>Goal was to take advantage of Archivematica's modularity to integrate Archivematica into a research data management architecture that would include other applications for deposit, management, etc.</p>
+				</section>
+
+				<section class="body">
+					<h2>York & Hull at the Outset</h2>
+					<hr>
+					<p>Established Hydra-based institutional repository, but no digital preservation capacity.</p>
+					<p>Wanted to be able to offer assured long-term preservation to faculty members.</p>
+				</section>
+
+				<section class="body">
+					<h2>Archivematica Falls Short!</h2>
+					<hr>
+					<p>After Phase 1 (testing), the archivists at York and Hull identified several areas where Archivematica was not sufficient to meet their RDM needs.</p>
+					<p>They applied for Phase 2 funding to begin developing solutions for the identified problems.</p>
+				</section>
+
+				<section class="body">
+					<h2>Winter of <strike>Our Discontent</strike> Development</h2>
+					<hr>
+					<p>Five deliverables:</p>
+					<ul>
+						<li>On demand automated DIP generation</li>
+						<li>METS parsing</li>
+						<li>Generic search REST API</li>
+						<li>Multiple checksum algorithms</li>
+						<li>Handle unidentified files</li>
+					</ul>
+					<br><br>
+					<small>Disclaimer: York and Hull are lovely to work with! But who can resist a Shakespeare joke?</small>
+				</section>
+
+				<section class="body">
+					<h2>Deploy! Deploy!</h2>
+					<hr>
+					<p>York and Hull successfully applied for Phase 3 funding to build a proof-of-concept platform, making use of the deliverables to integrate Archivematica with Hydra.</p>
+					<p>Meanwhile, Artefactual is currently bundling the new features into the 1.5 and 1.6 releases of Archivematica.</p>
+				</section>
+
+				<section class="body">
+					<h2 class="fancy">OCUL<br>+<br>Dataverse</h2>
+					<hr>
+					<h2>Case Study 2</h2>
+				</section>
+
+				<section class="body">
+					<h2>Dataverse at OCUL</h2>
+					<hr>
+					<p>Open source repository platform developed at Harvard.</p>
+					<p>Ontario Council of University Libraries' tech branch, Scholars Portal, hosts a Dataverse instance that is available to academics at Ontario's 21 universities.</p>
+				</section>
+
+				<section class="body">
+					<h2>Deposit and Access Reign</h2>
+					<hr>
+					<p>Dataverse excels as a deposit and access system, but has limited digital preservation functionality.</p>
+					<p>Goal of the project was to let users deposit content through Dataverse, running Archivematica preservation tasks in the background.</p>
+					<p>Important: users can deposit content over time, rather than all at once!</p>
+				</section>
+
+				<section class="body">
+					<h2>Automate It!</h2>
+					<hr>
+					<p>The integration makes use of Automation Tools, an Archivematica library that facilitates requests for updated information from Dataverse's API. An ingest script was also developed to manage ingest tasks.</p>
+				</section>
+
+				<section class="body">
+					<img src="img/dataverse-workflow.png">
+					<br>
+					<small>Orange: Automation Tools<br>Green: Dataverse<br>Blue: Archivematica</small>
+				</section>
+
+				<section class="body">
+					<h2>An Experiment</h2>
+					<hr>
+					<p>The Dataverse integration project resulted in a proof of concept workflow that isn't currently scheduled for release. However, it's available as a separate public branch of the project on Github.</p>
+					<p>At some point in the future, we would love to generalize the code and make it available in a public release.</p>
+				</section>
+
+				<section class="body">
+					<h2 class="fancy">Compute Canada<br>+<br>Globus</h2>
+					<hr>
+					<h2>Case Study 3</h2>
+				</section>
+
+				<section class="body">
+					<h2>Compute Canada</h2>
+					<hr>
+					<p>A national, non-profit organization that provides high performance research computing resources for 70 institutions and 10,000+ researchers.</p>
+					<p>Compute Canada uses Globus' Transfer Service and Publication Service tools to store and provide access to research data.</p>
+				</section>
+
+				<section class="body">
+					<h2>Canadian Polar Data Network Pilot</h2>
+					<hr>
+					<p>Scholars Portal holds terabytes of climate data from the CPDN. This corpus was used to pilot an integration where Archivematica acts as a bridge between the Globus Transfer and Publication Services and Compute Canada datastores.</p>
+				</section>
+
+				<section class="body">
+					<img src="img/cc-workflow.jpg">
+				</section>
+
+				<section class="body">
+					<h2>Another Experiment</h2>
+					<hr>
+					<p>This proof of concept is also not scheduled for release. We're working on getting it into a separate public branch of the Archivematica project on Github.</p>
+				</section>
+
+				<section class="body">
+					<h2 class="fancy">Archivists<br>+<br>RDM</h2>
+				</section>
+
+				<section class="body">
+					<h2>Get In Touch!</h2>
+					<hr>
+					<p>Twitter: <a href="https://twitter.com/archivalistic">@archivalistic</a> | <a href="https://twitter.com/archivematica">@archivematica</a></p>
+					<p>Email: <a href="mailto:sallain@artefactual.com">sallain@artefactual.com</a> or <a href="info@artefactual.com">info@artefactual.com</a></p>
+					<p>This presentation: <a href="http://bit.do/data-archivist">bit.do/data-archivist</a></p>
+				</section>
+
 			</div>
+
 		</div>
 
 		<script src="lib/js/head.min.js"></script>
-		<script src="js/reveal.js"></script>
+		<script src="js/reveal.min.js"></script>
 
 		<script>
-			// More info about config & dependencies:
-			// - https://github.com/hakimel/reveal.js#configuration
-			// - https://github.com/hakimel/reveal.js#dependencies
+
+			// Full list of configuration options available here:
+			// https://github.com/hakimel/reveal.js#configuration
 			Reveal.initialize({
+				controls: true,
+				progress: true,
+				history: true,
+				center: true,
+
+				theme: Reveal.getQueryHash().theme, // available themes are in /css/theme
+				transition: Reveal.getQueryHash().transition || 'none', // default/cube/page/concave/zoom/linear/fade/none
+
+				// Parallax scrolling
+				// parallaxBackgroundImage: 'https://s3.amazonaws.com/hakim-static/reveal-js/reveal-parallax-1.jpg',
+				// parallaxBackgroundSize: '2100px 900px',
+
+				// Optional libraries used to extend on reveal.js
 				dependencies: [
-					{ src: 'plugin/markdown/marked.js' },
-					{ src: 'plugin/markdown/markdown.js' },
-					{ src: 'plugin/notes/notes.js', async: true },
-					{ src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } }
+					{ src: 'lib/js/classList.js', condition: function() { return !document.body.classList; } },
+					{ src: 'plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+					{ src: 'plugin/zoom-js/zoom.js', async: true, condition: function() { return !!document.body.classList; } },
+					{ src: 'plugin/notes/notes.js', async: true, condition: function() { return !!document.body.classList; } }
 				]
 			});
+
 		</script>
+
 	</body>
 </html>
